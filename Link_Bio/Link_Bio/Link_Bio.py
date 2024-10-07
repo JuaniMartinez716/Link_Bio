@@ -32,9 +32,22 @@ app = rx.App(
     stylesheets = styles.STYLESHEETS,
     style = styles.BASE_STYLE,
 )
+
+title = "JuanitoDev | Esta es mi pagina web personal"
+description = "Aqui encontraras mis proyectos personales y mis diferentes redes sociales."
+preview = "jm.png"
+
 app.add_page(
     index,        
     title = "JuanitoDev | Esta es mi pagina web personal",
     description = "Aqui encontraras mis proyectos personales y mis diferentes redes sociales.",
-    image = "jm.ico"
+    image = "jm.ico",
+    meta = [
+        {"name": "og:type", "content": "website"},
+        {"name": "og:title", "content": title},
+        {"name": "og:description", "content": description},
+        {"name": "og:image", "content": preview},
+        {"name": "twitter:card", "content": "summary_large_image"},
+        {"name": "twitter:site", "content": "@Juani_Martinez8"},
+    ]
 )
